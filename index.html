@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Project 1 - Quiz Game</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- Responsive Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🌙 Theme Toggle -->
+  <div class="theme-toggle">
+    <label><input type="checkbox" id="themeToggle" /> 🌙 Theme</label>
+  </div>
+
+  <!-- 🎯 Quiz Container -->
+  <div class="quiz-container">
+    <h1>Quiz Game 🎯</h1>
+
+    <!-- 👤 Username Input -->
+    <div id="startBox">
+      <input type="text" id="username" placeholder="Enter your name" />
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- ❓ Question Box -->
+    <div id="question-box" class="hidden">
+      <h2 id="question"></h2>
+      <div id="timer">⏳ 10</div>
+      <div id="answers"></div>
+      <button id="nextBtn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- 🏆 Score Box -->
+    <div id="scoreBox" class="hidden">
+      <h2>Great job, <span id="playerName"></span>!</h2>
+      <p>Your Score: <span id="score">0</span></p>
+      <p>Last Played: <span id="lastScore"></span></p>
+      <button onclick="location.reload()">Restart</button>
+    </div>
+  </div>
+
+  <!-- 🔉 Sound Effects -->
+  <audio id="correctSound" src="Correct.mp3"></audio>
+  <audio id="wrongSound" src="Wrong.mp3"></audio>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
